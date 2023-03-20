@@ -4,16 +4,21 @@ import style from "../AppHeader/AppHeader.module.css";
 
 
 function AppHeader() {
-    return (
+    return (    
+        
         <nav className={style.header}>
-            <Logo />
-            <div className="constructor">         
+            
+            <div className={style.constructorBurger}>         
                 <BurgerIcon type="primary" />
-                <p className="text text_type_main-default">Конструктор</p>
+                <p className="text text_type_main-default mt-4 mb-4 ml-2">Конструктор</p>
             </div>
-            <ListIcon type="secondary" />
-            <p className="text text_type_main-default text_color_inactive">Лента заказов</p>
-            <ProfileIcon type="secondary" />
+            <div className={style.orderList}>
+                <ListIcon type="secondary" />
+                <p className="text text_type_main-default text_color_inactive">Лента заказов</p>
+            
+            </div>
+            <Logo />
+            <ProfileIcon type="secondary" />    
             <p className="text text_type_main-default text_color_inactive">Личный кабинет</p>
         </nav>
     )

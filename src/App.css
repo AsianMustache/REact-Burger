@@ -1,7 +1,6 @@
 .App {
   min-width: 2000px;
-  min-height: 1080px;
-  display: flex;
+  min-height: 1080px;  
   background-color: #131316;
 }
 
