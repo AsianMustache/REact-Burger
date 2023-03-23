@@ -1,0 +1,26 @@
+.burgerLayout {
+    position: absolute;    
+    width: 600px;
+    height: 912px;
+    left: 380px;
+    top: 128px;
+    /* interface/bg */
+    background: #131316;
+    /* interface/accent */
+    border: 2px solid #4C4CFF;
+}
+
+.ingredientsList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+}
+
+.ingredientsList a {
+    cursor: pointer;
+}
+
+.ingredientsList a:hover {
+    color: #F2F2F3;
+}
