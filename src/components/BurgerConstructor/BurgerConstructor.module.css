@@ -24,3 +24,26 @@
 .ingredientsList a:hover {
     color: #F2F2F3;
 }
+
+.bread {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.priceIcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 2px;
+    width: 62px;
+    height: 24px;
+    margin: 8px 105px;
+    /* margin-bottom: 8px;
+    margin-left: 105px;
+    margin-right: 105px; */
+}
