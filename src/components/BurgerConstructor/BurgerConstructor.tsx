@@ -1,6 +1,6 @@
 import React from "react";
-import { Logo, BurgerIcon, ListIcon, ProfileIcon, CurrencyIcon, Tab } from '@ya.praktikum/react-developer-burger-ui-components';
-import style from "../BurgerConstructor/BurgerConstructor.module.css";
+import { CurrencyIcon, Tab } from '@ya.praktikum/react-developer-burger-ui-components';
+import "../BurgerConstructor/BurgerConstructor.css";
 import compositions from '../../utils/data';
 
 
@@ -11,8 +11,8 @@ function BurgerConstructor () {
         
         
         <main>
-           <div className='custom-scroll'>
-                <section className={style.burgerLayout}>
+           
+                <section className="burgerLayout">
                     <h1 className="text text_type_main-large mt-10 mb-5">Соберите бургер</h1>
                     
                     <div style={{ display: 'flex', marginBottom: '40px' }}>
@@ -26,38 +26,40 @@ function BurgerConstructor () {
                         Начинки
                         </Tab>
                     </div>
+                    <div className="custom-scroll ingredient-scroll" >    
                         <h2 className="text text_type_main-medium">Булки</h2>
-                    <div className={style.bread}>
-                        {
-                        compositions.filter(
-                            function (items) {
-                                return items.type == 'bun'}).map((compositions) => 
-                                    <div key={compositions._id} className="text text_type_main-default mt-6 mr-6 mb-10 ml-4"> 
-                                        <img src={compositions.image} className="mb-1" alt={compositions.name} />                                     
-                                        <span className={style.priceIcon}>{compositions.price}<CurrencyIcon type="primary" /></span>                                    
-                                        <span>{compositions.name}</span>
-                                    </div>
-                                )
-                        }
-                    
-                    </div>
-                    <h2 className="text text_type_main-medium mt-10 mb-6">Соусы</h2>
-                    <div className={style.bread}>
-                        {
-                        compositions.filter(
-                            function (items) {
-                                return items.type == 'sauce'}).map((compositions) => 
-                                    <div key={compositions._id} className="text text_type_main-default mt-6 mr-6 mb-10 ml-4"> 
-                                        <img src={compositions.image} className="mb-1" alt={compositions.name} />                                     
-                                        <span className={style.priceIcon}>{compositions.price}<CurrencyIcon type="primary" /></span>                                    
-                                        <span>{compositions.name}</span>
-                                    </div>
-                                )
-                        }
-                    
+                        <div className="bread">
+                            {
+                            compositions.filter(
+                                function (items) {
+                                    return items.type == 'bun'}).map((compositions) => 
+                                        <div key={compositions._id} className="text text_type_main-default mt-6 mr-6 mb-10 ml-4"> 
+                                            <img src={compositions.image} className="mb-1" alt={compositions.name} />                                     
+                                            <span className="priceIcon">{compositions.price}<CurrencyIcon type="primary" /></span>                                    
+                                            <span>{compositions.name}</span>
+                                        </div>
+                                    )
+                            }
+                        
+                        </div>
+                        <h2 className="text text_type_main-medium mt-10 mb-6">Соусы</h2>
+                        <div className="bread">
+                            {
+                            compositions.filter(
+                                function (items) {
+                                    return items.type == 'sauce'}).map((compositions) => 
+                                        <div key={compositions._id} className="text text_type_main-default mt-6 mr-6 mb-10 ml-4"> 
+                                            <img src={compositions.image} className="mb-1" alt={compositions.name} />                                     
+                                            <span className="priceIcon">{compositions.price}<CurrencyIcon type="primary" /></span>                                    
+                                            <span>{compositions.name}</span>
+                                        </div>
+                                    )
+                            }
+                        
+                        </div>
                     </div>
                 </section>
-            </div>
+            
         </main>
     )
 }
